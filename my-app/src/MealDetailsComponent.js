@@ -1,46 +1,47 @@
 import React from "react";
 
 // MealDetailsComponent - <h3>, <p>, <a>
-function MealDetailsComponent(props) {
-  const detailsStyle = {
+
+// Refactor: add all variables into one object
+const style = {
+  details: {
     backgroundColor: "blanchedalmond",
     borderRadius: "10px",
     padding: "5px 10px",
-  };
-
-  const titleStyle = {
+  },
+  title: {
     fontSize: "22px",
     color: "green",
-  };
-
-  const infoStyle = {
+  },
+  image: {
+    borderRadius: "50%",
+    width: 150,
+    height: 150,
+  },
+  info: {
     color: "grey",
-  };
-
-  const labelStyle = {
+  },
+  label: {
     color: "black",
     fontSize: "12px",
-  };
+  },
+};
 
+function MealDetailsComponent(props) {
   return (
     <>
       <div style={{}}>
-        <img
-          src={props.imageSRC}
-          alt={props.title}
-          width={150}
-          style={{ borderRadius: "50%" }}
-        ></img>
+        <img src={props.imageSRC} alt={props.title} style={style.image}></img>
       </div>
 
-      <div style={detailsStyle}>
-        <h3 style={titleStyle}>{props.title}</h3>
-        <p style={infoStyle}>
-          <span style={labelStyle}>Area: </span>
+      <div style={style.details}>
+        <h3 style={style.title}>{props.title}</h3>
+        <p style={style.info}>
+          <span style={style.label}>Area: </span>
           {props.area}
         </p>
-        <p style={infoStyle}>
-          <span style={labelStyle}>Category: </span>
+        <p style={style.info}>
+          <span style={style.label}>Category: </span>
           {props.category}
         </p>
       </div>
