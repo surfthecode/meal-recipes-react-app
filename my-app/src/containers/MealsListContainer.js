@@ -1,6 +1,6 @@
 import React from "react";
-import MealDetailsComponent from "./MealDetailsComponent";
-import TitleComponent from "./TitleComponent";
+import MealDetailsComponent from "../components/MealDetailsComponent";
+import TitleComponent from "../components/TitleComponent";
 
 // MealsListContainer - contains MealDetailsComponent
 const style = {

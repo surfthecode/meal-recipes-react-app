@@ -1,9 +1,10 @@
 import logo from "./logo.svg";
 import "./App.css";
-import MealsListContainer from "./MealsListContainer.js";
+
+import Homepage from "./pages/Homepage";
 
 function App() {
-  return <MealsListContainer />;
+  return <Homepage />;
 }
 
 export default App;
