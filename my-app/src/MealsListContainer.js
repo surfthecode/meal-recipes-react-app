@@ -6,20 +6,14 @@ const MealsListContainer = () => {
   return (
     <>
       <h2>Latest Meals</h2>
-      <ul>
+      <div>
         <MealDetailsComponent
-          title="Recipe 1"
-          description="Meal description 1"
+          imageSRC="https://www.themealdb.com/images/media/meals/ustsqw1468250014.jpg"
+          title="Spicy Arrabiata Penne"
+          area="Italian"
+          category="Vegetarian"
         />
-        <MealDetailsComponent
-          title="Recipe 2"
-          description="Meal description 2"
-        />
-        <MealDetailsComponent
-          title="Recipe 3"
-          description="Meal description 3"
-        />
-      </ul>
+      </div>
     </>
   );
 };
