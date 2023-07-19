@@ -41,6 +41,7 @@ const style = {
   wrapper: {
     display: "flex",
     alignItems: "center",
+    fontFamily: "Arial",
   },
 };
 
