@@ -28,6 +28,7 @@ const MealsListContainer = () => {
           {mockData.meals.map((meal) => (
             <div style={style.col}>
               <MealDetailsComponent
+                key={meal.idMeal}
                 imageSRC={meal.strMealThumb}
                 title={meal.strMeal}
                 area={meal.strArea}
