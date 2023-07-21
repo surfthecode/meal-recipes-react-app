@@ -1,44 +1,23 @@
-import React from "react";
 import MealDetailsComponent from "../components/MealDetailsComponent";
 import TitleComponent from "../components/TitleComponent";
-import mockData from "../mock";
 
-// MealsListContainer - contains MealDetailsComponent
-const style = {
-  row: {
-    display: "flex",
-    flexWrap: "wrap",
-    marginLeft: "-15px",
-    marginRight: "-15px",
-  },
-
-  // col: {
-  //   flex: "0 0 33.33%",
-  //   maxWidth: "33.33%",
-  // },
-};
-
-const MealsListContainer = () => {
+const MealsListContainer = (props) => {
   return (
-    <>
-      <div style={{ width: "100%" }}>
-        <TitleComponent text="Latest Meals" />
-
-        <div style={style.row}>
-          {mockData.meals.map((meal) => (
-            <div style={style.col}>
-              <MealDetailsComponent
-                key={meal.idMeal}
-                imageSRC={meal.strMealThumb}
-                title={meal.strMeal}
-                area={meal.strArea}
-                category={meal.strCategory}
-              />
-            </div>
-          ))}
-        </div>
+    <div className="w-100 p-3">
+      <div className="mb-4">
+        <TitleComponent text={`Latest Meals`} />
       </div>
-    </>
+      <div className="row row-gap-5">
+        {props.data.meals.slice(0, 10).map((meal) => (
+          <MealDetailsComponent
+            title={meal.strMeal}
+            imageSRC={meal.strMealThumb}
+            key={meal.idMeal}
+            idMeal={meal.idMeal}
+          />
+        ))}
+      </div>
+    </div>
   );
 };
 
